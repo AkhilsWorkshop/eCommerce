@@ -1,10 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>timeZone Calci</title>
+    <title>Register Page</title>
 
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -21,19 +22,25 @@
 </head>
 <body>
     <div class="container">
-        <div class="card">
-            <h5 class="card-header">Welcome</h5>
-            <div class="card-body">
-              <h1 id="currentLocation">Hello, guest</h1>
 
-
-              <p class="card-text">Please sign in to explore more.</p>
-              <a href="/login.html" class="btn btn-primary" id="userName">Sign in</a>
-              <button class="btn btn-primary" id="signOut">Sign out</button>
-            </div>
-          </div>
-
+        <form id="registerForm" autocomplete="off">
+            <label class="label">Full name</label>
+            <input required type="text" class="inputField" id="register-name">
+            <label class="label">Email</label>
+            <input required type="email" class="inputField" id="register-email">
+            <label class="label">Mobile number</label>
+            <input required type="tel" minlength="10" maxlength="10" pattern="[0-9\-]+" class="inputField" id="register-number">
+            <label class="label">Password</label>
+            <input required type="password" class="inputField" id="register-password">
+            <div id="registerResult"></div>
+            <button type="submit" id="firstButton">Create account</button>
+            <p id="newUser">Have an account already?</p>
+            <button onclick="location.href = './login.html';" id="secondButton">Login</button>
+        </form>
+        
     </div>
-    <script type="module" src="/signedIn.js"></script>
+
+    
+    <script type="module" src="/register.js"></script>
 </body>
 </html>

@@ -1,10 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>timeZone Calci</title>
+    <title>Login Page</title>
 
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -21,19 +22,23 @@
 </head>
 <body>
     <div class="container">
-        <div class="card">
-            <h5 class="card-header">Welcome</h5>
-            <div class="card-body">
-              <h1 id="currentLocation">Hello, guest</h1>
 
+      <div class="logindiv">
+        <form id="loginForm" autocomplete="off">
+            <label class="label">Email</label>
+            <input required type="email" class="inputField" id="login-email">
+            <label class="label">Password</label>
+            <input required type="password" class="inputField" id="login-password">
+            <a href="#" id="forgotPassword">Forgot password?</a>
+            <div id="loginResult"></div>
+            <button type="submit" id="firstButton">Login</button>
+            <p id="newUser">New to the site?</p>
+            <button onclick="location.href = './register.html';" id="secondButton">Create an account</button>
+        </form>
+      </div>
 
-              <p class="card-text">Please sign in to explore more.</p>
-              <a href="/login.html" class="btn btn-primary" id="userName">Sign in</a>
-              <button class="btn btn-primary" id="signOut">Sign out</button>
-            </div>
-          </div>
-
-    </div>
-    <script type="module" src="/signedIn.js"></script>
+  
+    
+    <script type="module" src="/login.js"></script>
 </body>
 </html>

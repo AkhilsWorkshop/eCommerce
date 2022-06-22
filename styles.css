@@ -1,11 +1,12 @@
 body {
     font-family: 'Roboto', sans-serif;
+    background-color: #f3effd;
     
 }
 
 .container {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
@@ -19,8 +20,101 @@ body {
     flex-direction: column;
 }
 
-.time {
-    border: 2px solid green;
+/* Login & Register Page */
+
+#loginForm, #registerForm {
+    min-width: 300px;
     display: flex;
-    justify-content: start;
+    flex-direction: column;
+
 }
+
+#forgotPassword {
+    margin: 10px 0 0px 0;
+    text-align: right;
+    text-decoration: none;
+    color: #272727;
+
+}
+
+#forgotPassword:hover {
+    font-weight: 600;
+}
+
+#firstButton {
+    border-radius: 5px;
+    margin: 10px 0px 10px 0px;
+    height: 40px;
+    width: 100%;
+    color: white;
+    background-color: #040320;
+    font-weight: 600;
+}
+
+#firstButton:hover {
+    background-color: #272727;
+    color: white;
+}
+
+#secondButton {
+    border: none;
+    border-radius: 5px;
+    margin: 0px 0px 10px 0px;
+    height: 40px;
+    width: 100%;
+    color: white;
+    background-color: #4834d4;
+    font-weight: 600;
+}
+
+#secondButton:hover {
+    background-color: #3742fa;
+    color: white;
+}
+
+/* Error box */
+
+#loginResult, #registerResult {
+    display: none;
+    text-align: center;
+    background-color: #f59f9f;
+    border: 1px solid #f03f3f;
+    border-radius: 5px;
+    margin: 0px 0 10px 0;
+    padding: 10px; 
+}
+
+#straightLine {
+
+    display: inline-flex;
+    justify-content: space-between;
+}
+
+#newUser {
+
+    font-weight: 600;
+    text-align: center;
+}
+
+/* Input Field */
+
+.label {
+    margin: 10px 0 10px 0;
+    font-weight: 700;
+}
+
+
+input {
+    height: 40px;
+    padding: 0px 10px 0px 10px;
+    background-color: #f7f7f7;
+    outline-color: #f3effd;
+    border: 1px solid #ded1fd;
+    border-radius: 5px;
+    transition: 0.5s;
+}
+
+input:focus {
+    outline-color: #4834d4;
+}
+
